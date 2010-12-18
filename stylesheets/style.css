@@ -1,0 +1,113 @@
+/* @override http://0.0.0.0:4000/stylesheets/style.css */
+
+body {
+	padding-top: 0px;
+}
+
+a:link, a:visited, a:active {
+	color: #00EEFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #DFE9F2;
+}
+
+h1, h2, h3, h4, span, p.description {
+	font-family: Georgia, "Times New Roman", Serif;
+}
+
+body#home {
+	background: url(../images/gridbg.gif);
+	text-align: center;
+	padding-top: 80px;
+}
+
+body#home p.description {
+	font-style: italic;
+}
+
+ul.posts {
+	list-style: none;
+	margin: 20px 0;
+}
+
+ul.posts li {
+	margin: 10px 0;;
+}
+h1 {
+	font-size: 26px;
+	line-height: 36px;
+	font-weight: normal;
+	color: #DFE9F2;
+	font-variant: small-caps;
+	letter-spacing: 0.1em;
+}
+
+span {
+	font-style: italic;
+	color: #007C9E;
+	margin: 5px 0;
+	display: block;
+}
+
+#container {
+	background: url(../images/gridbg.gif);
+	padding: 50px 30px;
+	border: 30px solid #00EEFF;
+	padding-bottom: 100px;
+	border-top: none;
+	border-bottom: 1px solid #00EEFF;
+	position: relative;
+}
+
+a#home, a#previous, a#next {
+	position: absolute;
+	background: #00EEFF;
+	color: #181818;
+	font-size: 12px;
+	padding-left: 10px;
+}
+
+a#home {
+	right: 0;
+	top: 18px;
+}
+
+a#previous {
+	left: 0;
+	bottom: 18px;
+	padding-left: 0;
+	padding-right: 10px;
+}
+a#next {
+	right: 0;
+	bottom: 52px;
+}
+
+a#home strong, a#previous strong, a#next strong {
+	font-size: 16px;
+	font-weight: normal;
+}
+p {
+	color: #DFE9F2;
+}
+
+p + p {
+	text-indent: 1em;
+}
+body {
+	background: #3E4C4D;
+}
+
+@media only screen and (max-width: 479px) {
+	#container {
+		border-left: 1px solid #00EEFF;
+		border-right: 1px solid #00EEFF; 
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	a#previous, a#next {
+	display: none;
+}
+}
