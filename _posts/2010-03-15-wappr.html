@@ -1,0 +1,23 @@
+---
+layout: post
+title: "How I Built Wappr"
+---
+
+<span>March 2010</span>
+<p>I have never written an application from scratch before. That's why I built <a href="http://wappr.com">Wappr</a>. My single purpose of building Wappr is to learn. The 2 weeks (weekends, to be exact) time I used to build it proved to be fruitful, better than 1-2 months of hammering books.</p>
+<p></p>
+<p>Wappr is an 'app wish list'. It pulled the tweets mentioning phrases like 'I wish there was an app...' and people can vote for it. I wanted it to be an inspiration for the developers when they have no idea what to build.</p>
+<p></p>
+<p>As you probably knew, I have very little programming experience. My only 'real world' programming experience was building theme options for WordPress and working with a 3-person team with minor role. So I knew it from the start that building Wappr will require a lot of 'trial &amp; error' as well as 'looking at other people's code'.&nbsp;</p>
+<p></p>
+<p>My first version of Wappr is relatively simple. It only consists of fetching tweets, import them into the database then display them. Most of the code is based on the #168 episod of Railscasts - <a href="http://railscasts.com/episodes/168-feed-parsing">Feed Parsing</a>. Instead of parsing feed, I wrote my own code of parsing tweets. The tweets were fetched using this<a href="http://github.com/dancroak/twitter-search"> Twitter Search gem</a>.</p>
+<p></p>
+<p>Next, I wanted to let people vote for it. As usual, I looked for any voting-related gem or plugins and couldn't found any. I tried writing it myself but failed miserably. Then, I found out that <a href="http://www.sitepoint.com/books/rails2/">Simply Rails 2</a>, a book from SitePoint, devotes a chapter on voting. I grabbed the book, followed the step by step tutorial, and then made some changes to implement my own version of AJAX voting (using RJS template).&nbsp;</p>
+<p></p>
+<p>The last and most important part of Wappr is user session. I don't want to create a user-registration system because it would be meaningless for people to register just to vote. I tried to create a user session based on IP and cookies but somehow couldn't get it to work. Then I figured it would be easier (and less spam) if the user could login via Twitter to vote. I have been a long time reader of John Nunemaker's <a href="http://railstips.org/">Rails Tips</a>&nbsp;so I know he published <a href="http://twitter.rubyforge.org/">this fantastic Twitter gem</a>&nbsp;that supports <a href="http://railstips.org/blog/archives/2009/03/29/oauth-explained-and-what-it-is-good-for/">OAth</a>, the best way (and most secured) to handle Twitter authorization. John even published <a href="http://github.com/jnunemaker/twitter-app/">a sample app</a>&nbsp;to show how to use this gem. I wrote this part of code in Wappr mostly based on the sample app.</p>
+<p></p>
+<p>When I thought the app to be complete at this stage, my marketing instinct kicked in. I thought it would be great if Wappr could automatically tweet the 'app wish' on behalf of the user when it voted. I created a new 'Settings' model and use <a href="http://okonet.ru/projects/modalbox/">ModalBox</a>&nbsp;to handle the visual of the settings page. I initially have some difficulties on the ModalBox part but then <a href="http://net.tutsplus.com/tutorials/ruby/how-to-build-an-unobtrusive-login-system-in-rails/">this article from NetTuts</a> helped me solved it.</p>
+<p></p>
+<p>Overall, I'm quite happy about Wappr as my first app built from scratch (it also made to the f<a href="http://news.ycombinator.com/item?id=1123173">ront page of Hacker News and received lots of feedback</a>) but still, I thought it could be better. I regretted for not using Test Driven Development (TDD) approach which I've learned in my previous project and the code could be DRYer.&nbsp;</p>
+<p></p>
+<p>If you haven't seen <a href="http://wappr.com">Wappr</a> before, feel free to check it out and don't forget to submit your 'app wish' or vote for them wish you like.</p>

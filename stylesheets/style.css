@@ -13,7 +13,7 @@ a:hover {
 	color: #DFE9F2;
 }
 
-h1, h2, h3, h4, span, p.description {
+h1, h2, h3, span, p.description {
 	font-family: Georgia, "Times New Roman", Serif;
 }
 
@@ -43,6 +43,25 @@ h1 {
 	font-variant: small-caps;
 	letter-spacing: 0.1em;
 }
+
+h2 {
+	font-size: 22px;
+	line-height: 28px;
+	color: #DFE9F2;
+	font-weight: normal;
+	margin: 5px 0;
+	margin-top: 25px;
+}
+
+h3 {
+	line-height: 24px;
+	font-size: 18px;
+	color: #DFE9F2;
+	font-weight: normal;
+	margin-top: 10px;
+
+}
+
 
 span {
 	font-style: italic;
@@ -91,11 +110,19 @@ a#home strong, a#previous strong, a#next strong {
 }
 p {
 	color: #DFE9F2;
+	word-spacing: 1px;
 }
 
 p + p {
 	text-indent: 1em;
 }
+
+#container ol { margin: 0;
+padding: 0; color: #DFE9F2;}
+#container ol li {
+	margin: 10px 20px;
+}
+
 body {
 	background: #3E4C4D;
 }
